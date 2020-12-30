@@ -21,18 +21,18 @@
 #define HOME_R LCTL_T(KC_R)
 #define HOME_S LSFT_T(KC_S)
 #define HOME_T LGUI_T(KC_T)
-#define HOME_X LCA_T(KC_X)
-#define HOME_C RCS_T(KC_C)
-#define HOME_D SGUI_T(KC_D)
+#define HOME_W LCA_T(KC_W)
+#define HOME_F RCS_T(KC_F)
+#define HOME_P SGUI_T(KC_P)
 
 // Right-hand home row mods
 #define HOME_N RGUI_T(KC_N)
 #define HOME_E RSFT_T(KC_E)
 #define HOME_I RCTL_T(KC_I)
 #define HOME_O LALT_T(KC_O)
-#define HOME_H SGUI_T(KC_H)
-#define HOME_CM RCS_T(KC_COMM)
-#define HOME_DT LCA_T(KC_DOT)
+#define HOME_L SGUI_T(KC_L)
+#define HOME_U RCS_T(KC_U)
+#define HOME_Y LCA_T(KC_Y)
 
 // Left thumb keys
 #define THMB_L1 LT(_NAV,KC_ESC)
@@ -71,9 +71,9 @@ enum layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_COLEMAK_DH] = LAYOUT(
-      KC_MINS,    KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                                        KC_J,    KC_L,    KC_U,    KC_Y, KC_SCLN,  KC_EQL,
+      KC_MINS,    KC_Q,  HOME_W,  HOME_F,  HOME_P,    KC_B,                                        KC_J,  HOME_L,  HOME_U,  HOME_Y, KC_SCLN,  KC_EQL,
       KC_UNDS,  HOME_A,  HOME_R,  HOME_S,  HOME_T,    KC_G,                                        KC_M,  HOME_N,  HOME_E,  HOME_I,  HOME_O, KC_QUOT,
-       KC_GRV,    KC_Z,  HOME_X,  HOME_C,  HOME_D,    KC_V, _______, _______, _______, _______,    KC_K,  HOME_H, HOME_CM,  HOME_DT, KC_SLSH, KC_BSLS,
+       KC_GRV,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V, _______, _______, _______, _______,    KC_K,    KC_H, KC_COMM,  KC_DOT, KC_SLSH, KC_BSLS,
                                  _______, _______, THMB_L1, THMB_L2, THMB_L3,  KC_DEL, KC_BSPC, THMB_R1, _______, KC_MUTE),
 
     [_SYMBOLS] = LAYOUT(
