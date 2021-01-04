@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_SYMBOLS] = LAYOUT(
       _______, _______, _______, _______, _______, _______,                                     KC_AMPR, KC_LBRC, KC_RBRC, KC_EXLM, KC_CIRC, _______,
          REDO,    UNDO,     CUT,    COPY,   PASTE,  PASTE2,                                      KC_DLR, KC_LPRN, KC_RPRN, KC_ASTR, KC_PERC, _______,
-      _______, _______, _______,   SCRNS, SCRNS_2, _______, _______, _______, _______, _______, KC_HASH, KC_LCBR, KC_RCBR,   KC_AT, KC_TILD, _______,
+        RESET, _______, _______,   SCRNS, SCRNS_2, _______, _______, _______, _______, _______, KC_HASH, KC_LCBR, KC_RCBR,   KC_AT, KC_TILD, _______,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______),
 
     [_NAV] = LAYOUT(
