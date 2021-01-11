@@ -60,20 +60,25 @@
 #define WRKSP_L LCTL(KC_LEFT)
 #define WRKSP_R LCTL(KC_RGHT)
 
+// Gaming
+#define GAME DF(_GAMING)
+#define MAIN DF(_COLEMAK_DH)
+
 char wpm_str[10];
 
 enum layers {
     _COLEMAK_DH = 0,
     _SYMBOLS,
     _NAV,
-    _NUMPAD
+    _NUMPAD,
+    _GAMING
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_COLEMAK_DH] = LAYOUT(
       KC_MINS,    KC_Q,  HOME_W,  HOME_F,  HOME_P,    KC_B,                                        KC_J,  HOME_L,  HOME_U,  HOME_Y, KC_SCLN,  KC_EQL,
       KC_UNDS,  HOME_A,  HOME_R,  HOME_S,  HOME_T,    KC_G,                                        KC_M,  HOME_N,  HOME_E,  HOME_I,  HOME_O, KC_QUOT,
-       KC_GRV,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V, _______, _______, _______, _______,    KC_K,    KC_H, KC_COMM,  KC_DOT, KC_SLSH, KC_BSLS,
+       KC_GRV,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V, _______,    GAME, _______, _______,    KC_K,    KC_H, KC_COMM,  KC_DOT, KC_SLSH, KC_BSLS,
                                  _______, _______, THMB_L1, THMB_L2, THMB_L3,  KC_DEL, KC_BSPC, THMB_R1, _______, KC_MUTE),
 
     [_SYMBOLS] = LAYOUT(
@@ -92,7 +97,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______,   KC_F1,   KC_F2,   KC_F3,   KC_F4, _______,                                     _______,   KC_6,   KC_7,   KC_8, _______, _______,
       _______,   KC_F5,   KC_F6,   KC_F7,   KC_F8, _______,                                     _______,   KC_0,   KC_1,   KC_2,   KC_9, _______,
       _______,   KC_F9,  KC_F10,  KC_F11,  KC_F12, _______, _______, _______, _______, _______, _______,   KC_3,   KC_4,   KC_5, _______, _______,
-                                 _______, _______, _______, _______, _______, _______, _______, _______, _______, _______)
+                                 _______, _______, _______, _______, _______, _______, _______, _______, _______, _______),
+
+    [_GAMING] = LAYOUT(
+      KC_MINS,    KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                                        KC_J,    KC_L,    KC_U,    KC_Y, KC_SCLN,  KC_EQL,
+      KC_UNDS,    KC_A,    KC_R,    KC_S,    KC_T,    KC_G,                                        KC_M,    KC_N,    KC_E,    KC_I,    KC_O, KC_QUOT,
+       KC_GRV,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V, _______,    MAIN, _______, _______,    KC_K,    KC_H, KC_COMM,  KC_DOT, KC_SLSH, KC_BSLS,
+                                 _______, _______, THMB_L1, THMB_L2, THMB_L3,  KC_DEL, KC_BSPC, THMB_R1, _______, KC_MUTE),
 };
 
 // layer_state_t layer_state_set_user(layer_state_t state) {
